@@ -26,12 +26,6 @@
   border-radius: 2px;
 }
 
-@media (max-width: 500px) {
-  .newTask {
-    margin-right: 0;
-  }
-}
-
 .newTask__button {
   color: #fff;
   background-color: teal;
