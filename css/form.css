@@ -1,0 +1,95 @@
+.form {
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  .form {
+    flex-wrap: wrap;
+  }
+}
+
+.inputHeader {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 2px;
+  display: flex;
+}
+
+.newTask {
+  padding: 10px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  margin-right: 15px;
+  border-radius: 2px;
+}
+
+@media (max-width: 500px) {
+  .newTask {
+    margin-right: 0;
+  }
+}
+
+.newTask__button {
+  color: #fff;
+  background-color: teal;
+  border: none;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+@media (max-width: 500px) {
+  .newTask__button {
+    margin-top: 10px;
+    flex-grow: 1;
+  }
+}
+
+.tasks {
+  background-color: #fff;
+  margin: 0;
+  padding: 15px;
+  list-style-type: none;
+}
+
+.taskEach {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.taskText {
+  flex-grow: 2;
+  flex-basis: 80%;
+}
+
+.buttonDone {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  background-color: green;
+  border: none;
+}
+
+.buttonDone:active {
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+
+.buttonRemove {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  background-color: red;
+  color: #fff;
+  font-weight: 100;
+  border: none;
+}
+
+.buttonRemove:active {
+  border: 2px solid #000;
+  border-radius: 2px;
+}

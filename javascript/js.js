@@ -1,29 +1,19 @@
 {
-  const tasks = [
-    {
-      content: "Zrobić obiad",
-      done: true,
-    },
-    {
-      content: "Zrobić kupę",
-      done: false,
-    },
-    {
-      content: "Wyjść z domu",
-      done: true,
-    },
-  ];
+  const tasks = [];
 
   const render = () => {
     let htmlString = "";
 
     for (const task of tasks) {
       htmlString += `
-        <li${task.done ? ' style="text-decoration: line-through"' : ""}>
-        <button class="js-done">Done?</button>
-        <button class="js-remove">Usuń</button>
-            ${task.content}
+        <li class="taskEach"${
+          task.done ? ' style="text-decoration: line-through"' : ""
+        }>
+        <button class="js-done buttonDone"></button>
+            <div class="taskText">${task.content}</div>
+            <button class="js-remove buttonRemove"><i class="fa fa-trash"></i></button>
         </li>
+        <hr>
         `;
     }
 
@@ -48,7 +38,7 @@
       content: newTaskContent,
       done: false,
     });
-    newTaskContent = "";
+    document.querySelector(".js-newTask").value = ``;
     render();
   };
 

@@ -7,13 +7,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="javascript/js.js"></script>
   </head>
   <body class="body">
-    <form class="js-form">
-      <input class="js-newTask" type="text" name="" id="" />
-      <button>Dodaj zadanie</button>
-    </form>
-    <ul class="js-tasks"></ul>
+    <div class="container">
+      <h1 class="header">Lista zadań</h1>
+      <h2 class="inputHeader">Dodaj nowe zadanie</h2>
+      <form class="js-form form">
+        <input
+          class="js-newTask newTask"
+          type="text"
+          placeholder="Co jest do zrobienia?"
+        />
+        <button class="newTask__button">Dodaj zadanie</button>
+      </form>
+      <h2 class="inputHeader">Lista zadań</h2>
+      <ul class="js-tasks tasks"></ul>
+    </div>
   </body>
 </html>
