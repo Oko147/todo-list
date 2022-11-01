@@ -26,7 +26,7 @@
             <div class="list__item ${task.done ? " list__item--done" : ""}">${
         task.content
       }</div>
-            <button class="js-remove list__button list__button--remove"><i class="fa fa-trash"></i></button>
+            <button class="js-remove list__button list__button--remove">🗑</button>
         </li>
         <hr>
         `;
