@@ -1,5 +1,5 @@
 .form {
-  background-color: #fff;
+  background-color: white;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -8,81 +8,40 @@
 @media (max-width: 500px) {
   .form {
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
-.inputHeader {
-  background-color: #fff;
+.form__header {
+  background-color: white;
   padding: 15px;
   margin-bottom: 2px;
+  margin-top: 10px;
   display: flex;
 }
 
 .newTask {
+  max-width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid lightgray;
   flex-grow: 1;
   border-radius: 2px;
 }
 
 .newTask__button {
-  color: #fff;
+  color: white;
   background-color: teal;
   border: none;
-  font-weight: lighter;
+  font-weight: 100;
   padding: 10px;
+  margin-left: 10px;
 }
 
 @media (max-width: 500px) {
   .newTask__button {
     margin-top: 10px;
+    margin-left: 0;
     flex-grow: 1;
+    flex-basis: 100%;
   }
-}
-
-.tasks {
-  background-color: #fff;
-  margin: 0;
-  padding: 15px;
-  list-style-type: none;
-}
-
-.taskEach {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-shrink: 0;
-}
-
-.taskText {
-  flex-grow: 2;
-  flex-basis: 80%;
-}
-
-.buttonDone {
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
-  background-color: green;
-  border: none;
-}
-
-.buttonDone:active {
-  border: 2px solid #000;
-  border-radius: 2px;
-}
-
-.buttonRemove {
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
-  background-color: red;
-  color: #fff;
-  font-weight: 100;
-  border: none;
-}
-
-.buttonRemove:active {
-  border: 2px solid #000;
-  border-radius: 2px;
 }

@@ -1,0 +1,51 @@
+.tasks {
+  background-color: white;
+  margin: 0;
+  padding: 15px;
+  list-style-type: none;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  word-break: break-all;
+}
+
+.list__item {
+  flex-grow: 1;
+}
+
+.list__item--done {
+  text-decoration: line-through;
+}
+
+.list__button--done {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  flex-shrink: 0;
+}
+
+.list__button--done:active {
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.list__button--remove {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  flex-shrink: 0;
+}
+
+.list__button--remove:active {
+  border: 2px solid black;
+  border-radius: 2px;
+}
