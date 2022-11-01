@@ -7,13 +7,13 @@
     for (const task of tasks) {
       htmlString += `
         <li class="list">
-        <button class="js-done list__button--done">${
+        <button class="js-done list__button list__button--done">${
           task.done ? "✓" : ""
         }</button>
             <div class="list__item ${task.done ? " list__item--done" : ""}">${
         task.content
       }</div>
-            <button class="js-remove list__button--remove"><i class="fa fa-trash"></i></button>
+            <button class="js-remove list__button list__button--remove"><i class="fa fa-trash"></i></button>
         </li>
         <hr>
         `;
@@ -40,6 +40,7 @@
       content: newTaskContent,
       done: false,
     });
+
     document.querySelector(".js-newTask").value = ``;
     document.querySelector(".js-newTask").focus();
     render();
