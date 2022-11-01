@@ -1,5 +1,17 @@
 {
-  const tasks = [];
+  const tasks = [
+    { content: "Pójść do sklepu" },
+    {
+      content:
+        "Przykładowe, długie zadanie, aby pokazać jak zachowuje się lista na ekranie telefonu",
+    },
+    {
+      content: "Ułożyć kostkę Rubika poniżej 30 sekund",
+    },
+    {
+      content: "Załatwić salę do grania na fortepianie",
+    },
+  ];
 
   const render = () => {
     let htmlString = "";
@@ -64,7 +76,6 @@
       event.preventDefault();
 
       const newTaskContent = document.querySelector(".js-newTask").value.trim();
-      console.log(newTaskContent);
       if (newTaskContent === "") {
         return;
       }
