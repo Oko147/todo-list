@@ -13,7 +13,7 @@ _The perfect task storage <sub><sup><sub>until you refresh the page<sub/><sup/><
 ## How to use
 
 1. Type your task in the only possible text input below "Dodaj nowe zadanie" header
-2. Press teal-coloured button on the right
+2. Press Enter or click on the teal button on the right
 3. Your task should appear in the list below.
 4. You can select finished task by pressing green button on the left of the list
    - Finished tasks are marked with a "✓" and the text will appear with the line-through style
@@ -27,3 +27,11 @@ _The perfect task storage <sub><sup><sub>until you refresh the page<sub/><sup/><
 ## Links
 
 [The ToDo List](https://oko147.github.io/todo-list)
+
+<hr>
+
+## Languages used
+
+- HTML
+- CSS
+- JavaScript
