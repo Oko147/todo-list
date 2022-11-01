@@ -28,6 +28,7 @@
       }</div>
             <button class="js-remove list__button list__button--remove"><i class="fa fa-trash"></i></button>
         </li>
+        <hr>
         `;
     }
 
