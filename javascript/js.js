@@ -1,12 +1,13 @@
 {
   const tasks = [
-    { content: "Pójść do sklepu" },
+    { content: "Pójść do sklepu", done: true },
+
     {
       content:
         "Przykładowe, długie zadanie, aby pokazać jak zachowuje się lista na ekranie telefonu",
     },
     {
-      content: "Ułożyć kostkę Rubika poniżej 30 sekund",
+      content: "Ułożyć kostkę Rubika w czasie poniżej 30s",
     },
     {
       content: "Załatwić salę do grania na fortepianie",
