@@ -10,12 +10,13 @@ html {
 }
 
 .body {
-  background-color: lightgray;
+  background-color: #eee;
 }
 
 .container {
+  max-width: 1000px;
   align-items: center;
-  padding: 50px;
+  padding: 20px;
   margin: 0 auto;
 }
 

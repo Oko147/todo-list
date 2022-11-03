@@ -1,5 +1,5 @@
 .form {
-  background-color: white;
+  background-color: #fff;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 }
 
 .form__header {
-  background-color: white;
+  background-color: #fff;
   padding: 15px;
   margin-bottom: 2px;
   margin-top: 10px;
@@ -23,17 +23,18 @@
 .newTask {
   max-width: 100%;
   padding: 10px;
-  border: 1px solid lightgray;
+  border: 1px solid #ddd;
   flex-grow: 1;
   border-radius: 2px;
 }
 
 .newTask__button {
-  color: white;
-  background-color: teal;
+  color: #ffffff;
+  background-color: #008080;
   border: none;
   padding: 10px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -43,4 +44,8 @@
     flex-grow: 1;
     flex-basis: 100%;
   }
+}
+
+.newTask__button:hover {
+  background-color: #00a0a0;
 }
