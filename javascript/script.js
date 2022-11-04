@@ -1,38 +1,32 @@
 {
   const tasks = [
-    { content: "Pójść do sklepu", done: true },
-
     {
-      content:
-        "Przykładowe, długie zadanie, aby pokazać jak zachowuje się lista na ekranie telefonu",
+      content: "Zrobić pranie",
     },
     {
-      content: "Ułożyć kostkę Rubika w czasie poniżej 30s",
-    },
-    {
-      content: "Załatwić salę do grania na fortepianie",
+      content: "Wyjść z psem",
     },
   ];
 
-  const render = () => {
-    let htmlString = "";
+  const addNewTask = (newTaskContent) => {
+    tasks.push({
+      content: newTaskContent,
+    });
 
-    for (const task of tasks) {
-      htmlString += `
-        <li class="list">
-        <button class="js-done list__button list__button--done">${
-          task.done ? "✓" : ""
-        }</button>
-            <div class="list__item ${task.done ? " list__item--done" : ""}">${
-        task.content
-      }</div>
-            <button class="js-remove list__button list__button--remove">🗑</button>
-        </li>
-        <hr>
-        `;
-    }
+    render();
+  };
 
-    document.querySelector(".js-tasks").innerHTML = htmlString;
+  const removeTask = (taskIndex) => {
+    tasks.splice(taskIndex, 1);
+    render();
+  };
+
+  const toggleTaskDone = (taskIndex) => {
+    tasks[taskIndex].done = !tasks[taskIndex].done;
+    render();
+  };
+
+  const listButtons = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
     removeButtons.forEach((removeButton, index) => {
       removeButton.addEventListener("click", () => {
@@ -48,40 +42,45 @@
     });
   };
 
-  const addNewTask = (newTaskContent) => {
-    tasks.push({
-      content: newTaskContent,
-      done: false,
-    });
+  const render = () => {
+    let htmlString = "";
 
+    for (const task of tasks) {
+      htmlString += `
+        <li class="list">
+        <button class="js-done list__button list__button--done">
+        ${task.done ? "✓" : ""}
+          </button>
+            <div class="list__item ${task.done ? " list__item--done" : ""}">
+            ${task.content}
+            </div>
+            <button class="js-remove list__button list__button--remove">🗑</button>
+        </li>
+        <hr>
+        `;
+    }
+
+    document.querySelector(".js-tasks").innerHTML = htmlString;
+    listButtons();
+  };
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    if (newTaskContent === "") {
+      return;
+    }
+    addNewTask(newTaskContent);
     document.querySelector(".js-newTask").value = ``;
     document.querySelector(".js-newTask").focus();
-    render();
-  };
-
-  const removeTask = (taskIndex) => {
-    tasks.splice(taskIndex, 1);
-    render();
-  };
-
-  const toggleTaskDone = (taskIndex) => {
-    tasks[taskIndex].done = !tasks[taskIndex].done;
-    render();
   };
 
   const init = () => {
     render();
 
     const form = document.querySelector(".js-form");
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const newTaskContent = document.querySelector(".js-newTask").value.trim();
-      if (newTaskContent === "") {
-        return;
-      }
-      addNewTask(newTaskContent);
-    });
+    form.addEventListener("submit", onFormSubmit);
   };
 
   init();
